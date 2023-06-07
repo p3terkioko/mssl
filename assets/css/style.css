@@ -132,7 +132,27 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
+.navigation navbar navbar-default {
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
 
+.navigation navbar navbar-default:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.navigation navbar navbar-default:hover:after {
+  opacity: 1;
+}
+                  
 @media (max-width: 767px) {
   body {
     font-size: 14px;
@@ -511,6 +531,10 @@ img {
     font-size: 14px;
     font-size: 0.93333rem;
     padding: 8px 22px;
+  }
+  .navigation navbar navbar-default {
+    background-color: aqua;
+    transition: background-color 0.5s;
   }
 }
 
