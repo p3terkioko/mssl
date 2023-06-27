@@ -495,40 +495,40 @@
     /*------------------------------------------
         = GOOGLE MAP
     -------------------------------------------*/  
-    function map() {
+    // function map() {
 
-        var locations = [
-            ['City inn khulna', 22.820884, 89.551216,2],
-        ];
+    //     var locations = [
+    //         ['Nairobi', -1.3070891591133784, 36.856746625252036],
+    //     ];
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: new google.maps.LatLng( 22.8103888, 89.5619609),
-            zoom: 12,
-            scrollwheel: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+    //     var map = new google.maps.Map(document.getElementById('map'), {
+    //         center: new google.maps.LatLng( -1.3070891591133784, 36.856746625252036),
+    //         zoom: 12,
+    //         scrollwheel: false,
+    //         mapTypeId: google.maps.MapTypeId.ROADMAP
 
-        });
+    //     });
 
-        var infowindow = new google.maps.InfoWindow();
+    //     var infowindow = new google.maps.InfoWindow();
 
-        var marker, i;
+    //     var marker, i;
 
-        for (i = 0; i < locations.length; i++) {  
-                marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                map: map,
-                icon:'assets/images/map-marker.png'
-            });
+    //     for (i = 0; i < locations.length; i++) {  
+    //             marker = new google.maps.Marker({
+    //             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+    //             map: map,
+    //             icon:'assets/images/map-marker.png'
+    //         });
 
-            google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                return function() {
-                    infowindow.setContent(locations[i][0]);
-                    infowindow.open(map, marker);
-                }
-            })(marker, i));
-        }
+    //         google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    //             return function() {
+    //                 infowindow.setContent(locations[i][0]);
+    //                 infowindow.open(map, marker);
+    //             }
+    //         })(marker, i));
+    //     }
 
-    }; 
+    // }; 
 
 
     /*------------------------------------------
