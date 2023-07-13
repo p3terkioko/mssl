@@ -36,7 +36,42 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+       .wrapper {
+  position: relative;
+  flex-grow: 1;
+  margin: auto;
+  max-width: 1200px;
+  max-height: 1200px;
+  
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2vmin;
+  justify-items: center;
+  align-items: center;
+}
 
+.wrapper .IMG {
+  z-index: 1;
+  grid-column: span 2;
+  max-width: 100%;
+  margin-bottom: -52%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: scale(1);
+  transition: all .25s;
+  
+  &:nth-child(7n + 1) {
+    grid-column: 2 / span 2;
+  }
+  
+  &:hover {
+    z-index: 2;
+    transform: scale(2);
+  }
+}
+
+        </style>
 </head>
 
 <body>
@@ -727,7 +762,22 @@
                     </div>
                 </div>
             </div>
+            <div class="wrapper">
+                <img src="./assets/images/gallery/1.jpeg" alt="">
+                <img src="./assets/images/gallery/2.jpeg" alt="">
+                <img src="./assets/images/gallery/3.jpeg" alt="">
+                <img src="./assets/images/gallery/4.jpeg" alt="">
+                <img src="./assets/images/gallery/5.jpeg" alt="">
+                <img src="./assets/images/gallery/6.jpeg" alt="">
+                <img src="./assets/images/gallery/7.jpeg" alt="">
+                <img src="./assets/images/gallery/8.jpeg" alt="">
+                <img src="./assets/images/gallery/9.jpeg" alt="">
+                <img src="./assets/images/gallery/10.jpeg" alt="">
+                <img src="./assets/images/gallery/11.jpeg" alt="">
+              </div>
         </section>
+        
+          
         <!-- end testimonials-section-s2 -->
         <!-- <section class="testimonials-section-s2 section-padding">
             <div class="container">

@@ -614,7 +614,7 @@
             submitHandler: function (form) {
                 $.ajax({
                     type: "POST",
-                    url: "mail-2.php",
+                    url: "mail.php",
                     data: $(form).serialize(),
                     success: function () {
                         $( "#loader").hide();
